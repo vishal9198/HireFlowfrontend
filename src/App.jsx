@@ -1,6 +1,3 @@
-import { useState } from "react";
-
-import "./App.css";
 import {
   SignedIn,
   SignedOut,
@@ -8,22 +5,24 @@ import {
   SignOutButton,
   UserButton,
 } from "@clerk/clerk-react";
+import { Route, Routes } from "react-router";
+import HomePage from "./pages/HomePage.jsx";
+import ProblemPage from "./pages/ProblemPage.jsx";
+import { Toaster } from "react-hot-toast";
+
+
+  
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1>Welcome to the HireFlow</h1>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
 
-      <SignedOut>
-        <SignInButton mode="model" />
-        <button>Login</button>
-      </SignedOut>
-      <SignedIn>
-        <SignOutButton />
-      </SignedIn>
-      <UserButton />
+        <Route path="/problem" element={<ProblemPage />} />
+      </Routes>
+
+      <Toaster />
     </>
   );
 }
