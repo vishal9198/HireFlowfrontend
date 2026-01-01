@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage.jsx";
 import ProblemsPage from "./pages/ProblemsPage.jsx";
 import { Toaster } from "react-hot-toast";
 import DashboardPage from "./pages/DashboardPage.jsx";
+import ProblemPage from "./pages/ProblemPage.jsx";
 function App() {
   const { isSignedIn, isLoaded } = useUser();
   //get rid of flikkering effect
@@ -23,6 +24,10 @@ function App() {
         <Route
           path="/problems"
           element={isSignedIn ? <ProblemsPage /> : <Navigate to={"/"} />}
+        />
+        <Route
+          path="/problem/:id"
+          element={isSignedIn ? <ProblemPage /> : <Navigate to={"/"} />}
         />
       </Routes>
 
