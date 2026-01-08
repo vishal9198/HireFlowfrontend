@@ -3,7 +3,7 @@ import axios from "axios";
 //   baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000/api",
 //   withCredentials: true, //by adding this field browser will send the cookies to server automatically on every request
 // });
-export default axiosInstance;
+// export default axiosInstance;
 const axiosInstance = axios.create({
   baseURL:"https://hireflowbackend.onrender.com/api" || "http://localhost:3000/api",
   withCredentials: true,
