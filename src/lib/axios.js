@@ -5,7 +5,7 @@ const axiosInstance = axios.create({
 });
 export default axiosInstance;
 // const axiosInstance = axios.create({
-//   baseURL:"https://hireflowbackend.up.railway.app/api" || "http://localhost:3000/api",
+//   baseURL:"https://hireflowbackend.onrender.com/api" || "http://localhost:3000/api",
 //   withCredentials: true,
 // });
 
